@@ -43,7 +43,7 @@ def print_sline():
     print_cyan(f"""|----------------------------------------------|""")
 
 def send_hits_to_telegram():
-    telegram_token = "7918263580:AAFkT2Rc2vu0zvPjiutjQbOPzU-Oty-pNdA"
+    telegram_token = "7589725554:AAGccmKnju8AyYARhiaKmECrPKX0XJmrxEQ"
     telegram_chat_id = "7593550190"
 
 
