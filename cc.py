@@ -374,4 +374,68 @@ def check_credit_cards(cc_list,sessions):
                 error = res['data']['error']['message']
                 if 'code' in error:
                     print(f'> 𝗖𝗖𝗡 ✅ ---+-+-+-+-+!')
+                    print_yellow(f'> {card} - {error}')
+                    ccn += 1
+                    with open('CCN-HITS.txt','a') as hits:
+                        hits.write(card+'\n')
+                    continue
+                else:
+                    print(f'> 𝐃𝐞𝐜𝐥𝐢𝐧𝐞𝐝 ❌ -------!')
+                    print_red(f'> {card} - {error}')
+                    dec += 1
+            else:
+                print(f'> 𝐀𝐩𝐩𝐫𝐨𝐯𝐞𝐝 ✅ ++++++++++++')
+                with open('CCN-HITS.txt','a') as hits:
+                    hits.write(card+'\n')
+                print_green(f'> {card} - Successfull!')
+                hit += 1
+                
+        except Exception as e:
+            print_red('|+| Skipping Invalid Input.....')
+            continue
+    processing_time = time.time() - start_time
+    minutes = int(processing_time // 60)
+    seconds = processing_time % 60
+    print_line()
+    print_green(f'                   SUMMARY           ')
+    print_line()
+    print_green(f"""[+] Gateway: Single + Mass Stripe Auth + CCN
+[~] Total: {total}
+[>] Declined: {dec}
+[>] Hit: {hit}
+[>] CCN: {ccn}
+[÷] Time: {minutes} min and {seconds:.2f} sec""")
+    print_line()
+    typing_animation('Thanks for using my checker!!')
+
+def confirm_time():
+    utc_now = datetime.utcnow()
+    ksa_now = utc_now + timedelta(hours=3)
+    ksa_date = ksa_now.date()
+    if ksa_date > datetime(2025, 12, 25).date():
+        typing_animation("The checker is dead now, follow  for more!!")
+        exit()
+def main():
+    display_banner()
+    print_line()
+    confirm_time()
+    check_modules(required_modules)
+    typing_animation("This CC Checker script is brought to you by @Ess4 Pythonista, Follow for more weekly script....")
+    session = manage_session_file()
+    if session:
+    
+        cc_list = get_credit_cards()
+        if cc_list:
+            print_green("          Checking credit card(s)...")
+            check_credit_cards(cc_list,session)
+        else:
+            print_red("No valid credit card provided.")
+    else:
+        print(f"Unknown Error")
+
+    
+if __name__ == "__main__":
+    main()
+    
+
                
