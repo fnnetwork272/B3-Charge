@@ -57,7 +57,7 @@ def send_hits_to_telegram(card):
             print_red("Failed to send message to Telegram")
     except Exception as e:
         print_red(f"Telegram API Error: {e}")
-    )
+    
 def check_modules(modules):
     for module in modules:
         try:
