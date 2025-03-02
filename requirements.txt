@@ -1,5 +1,5 @@
 python-telegram-bot
 colorama
 aiohttp
-pymango
+pymongo
 python-dateutil
