@@ -116,7 +116,7 @@ class AdvancedCardChecker:
         except Exception as e:
             logger.error(f"Failed to send admin notification: {e}")
 
-    def check_subscription(self, func):
+     @check_subscription
     async def start(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
         user = update.effective_user
         keyboard = [
