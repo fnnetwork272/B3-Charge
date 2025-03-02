@@ -1,1 +1,1 @@
-web: python3 UpdateStripe.py
+web: python3 app.py
