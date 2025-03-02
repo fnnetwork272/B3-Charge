@@ -282,13 +282,7 @@ class AdvancedCardChecker:
         await update.message.reply_text(
             f"🎉 Subscription activated until {expires_at.strftime('%Y-%m-%d')}!"
         )
-                
-        elif query.data == 'stats':
-            await self.show_stats(update, context)
-        elif query.data == 'help':
-            await self.show_help(update, context)
-        elif query.data == 'cancel':
-            await self.stop_command(update, context)
+               
 
     async def show_help(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
         help_text = (
