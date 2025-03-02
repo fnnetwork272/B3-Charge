@@ -6,6 +6,7 @@ import string
 import os
 import json
 import logging
+from flask import Flask, render_template
 from datetime import datetime
 from telegram import Bot, Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import (
@@ -648,9 +649,11 @@ def main():
     
     for handler in handlers:
         application.add_handler(handler)
-    
+
     application.add_error_handler(checker.error_handler)
     application.run_polling()
+
+app = Flask(__name__)
 
 if __name__ == '__main__':
     # Set host to '0.0.0.0' to make the server accessible on the local network
