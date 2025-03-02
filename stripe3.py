@@ -31,7 +31,7 @@ logger = logging.getLogger(__name__)
 
 class AdvancedCardChecker:
     def __init__(self):
-        self.mongo_client = MongoClient('mongodb://localhost:27017/')  # Update connection string as needed
+        self.mongo_client = MongoClient('mongodb+srv://ElectraOp:BGMI272@cluster0.1jmwb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')  # Update connection string as needed
         self.db = self.mongo_client['stripe_checker']
         self.users_col = self.db['users']
         self.keys_col = self.db['keys']
