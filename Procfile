@@ -1,1 +1,1 @@
-web: python3 UpdateStripe.py
+worker: python3 UpdateStripe.py
