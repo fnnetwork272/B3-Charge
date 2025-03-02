@@ -652,5 +652,6 @@ def main():
     application.add_error_handler(checker.error_handler)
     application.run_polling()
 
-if __name__ == "__main__":
-    main()
+if __name__ == '__main__':
+    # Set host to '0.0.0.0' to make the server accessible on the local network
+    app.run(host='0.0.0.0', port=10000, debug=True)
