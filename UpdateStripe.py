@@ -113,7 +113,6 @@ class AdvancedCardChecker:
         except Exception as e:
             logger.error(f"Failed to send admin notification: {e}")
 
-    @check_subscription
     async def start(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
         user = update.effective_user
         keyboard = [
@@ -190,7 +189,6 @@ class AdvancedCardChecker:
         elif query.data == 'cancel':
             await self.stop_command(update, context)
 
-    @check_subscription
     async def broadcast_command(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
         user = update.effective_user
         if user.id != self.admin_id:
