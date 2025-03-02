@@ -38,7 +38,6 @@ class AdvancedCardChecker:
         self.admin_id = 7593550190  # Hardcoded admin ID
         self.admin_username = "FNxElectra"  # Replace with actual admin username
         self.bot_username = None
-        self.allowed_users = self.load_allowed_users()
         self.active_tasks = {}
         self.user_stats = {}
         self.proxy_pool = []
