@@ -3,3 +3,4 @@ colorama
 aiohttp
 pymongo
 python-dateutil
+flask
