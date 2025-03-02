@@ -37,7 +37,7 @@ class AdvancedCardChecker:
         self.proxy_pool = []
         self.load_proxies()
         self.request_timeout = aiohttp.ClientTimeout(total=30)
-        self.max_concurrent = 5
+        self.max_concurrent = 1
         self.stripe_key = "pk_live_51JwIw6IfdFOYHYTxyOQAJTIntTD1bXoGPj6AEgpjseuevvARIivCjiYRK9nUYI1Aq63TQQ7KN1uJBUNYtIsRBpBM0054aOOMJN"
         self.bin_cache = {}
 
@@ -233,7 +233,7 @@ class AdvancedCardChecker:
             )
             await update.message.reply_text(
                 "✅ File received! Starting check...\n"
-                "⚡ Speed: 5-10 cards/sec\n"
+                "⚡ Speed: 1 cards/sec\n"
                 "📈 Use /progress for live updates"
             )
         except Exception as e:
