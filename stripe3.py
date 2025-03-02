@@ -531,7 +531,7 @@ class AdvancedCardChecker:
 
 def main():
     checker = AdvancedCardChecker()
-    application = Application.builder().token("7737411241:AAEmBxOM2n7sXWOmid5u3CHqxD0EHvSkw9E").post_init(checker.post_init).build()
+    application = Application.builder().token("8122009466:AAGozurb_8QFmsW9-iwkvv4UNHR_ut4f-8U").post_init(checker.post_init).build()
     checker.application = application
     
     handlers = [
