@@ -639,6 +639,9 @@ def main():
         CommandHandler('stats', checker.show_stats),
         CommandHandler('help', checker.show_help),
         CommandHandler('chk', checker.chk_command),
+        CommandHandler('broadcast', checker.broadcast_command),
+        CommandHandler('genkey', checker.genkey_command),
+        CommandHandler('redeem', checker.redeem_command),
         MessageHandler(filters.Document.TXT, checker.handle_file),
         CallbackQueryHandler(checker.button_handler)
     ]
