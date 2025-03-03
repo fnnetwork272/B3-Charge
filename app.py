@@ -43,8 +43,8 @@ class AdvancedCardChecker:
         self.user_stats = {}
         self.proxy_pool = []
         self.load_proxies()
-        self.request_timeout = aiohttp.ClientTimeout(total=50)
-        self.max_concurrent = 5
+        self.request_timeout = aiohttp.ClientTimeout(total=180)
+        self.max_concurrent = 20
         self.stripe_key = "pk_live_51JwIw6IfdFOYHYTxyOQAJTIntTD1bXoGPj6AEgpjseuevvARIivCjiYRK9nUYI1Aq63TQQ7KN1uJBUNYtIsRBpBM0054aOOMJN"
         self.bin_cache = {}
 
