@@ -456,8 +456,7 @@ class AdvancedCardChecker:
 
 [⌬]𝐂𝐇𝐄𝐂𝐊𝐄𝐃 𝐁𝐘 -» @{user.username if user.username else user.full_name}
 [⌬]𝐃𝐄𝐕 -» 𓆰𝅃꯭᳚⚡!! ⏤͟͟͞͞𝐅ɴ x EʟᴇᴄᴛʀᴀOᴘ𓆪𓆪⏤͟͞➤⃟🔥✘
-[み]𝗕𝗼𝘁 -» @FN_CHECKERR_BOT
-"""
+[み]𝗕𝗼𝘁 -» @FN_CHECKERR_BOT"""
 
     async def process_line(self, user_id, combo, semaphore, update):
         start_time = datetime.now()
