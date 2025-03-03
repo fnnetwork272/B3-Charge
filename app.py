@@ -43,7 +43,7 @@ class AdvancedCardChecker:
         self.user_stats = {}
         self.proxy_pool = []
         self.load_proxies()
-        self.request_timeout = aiohttp.ClientTimeout(total=60)
+        self.request_timeout = aiohttp.ClientTimeout(total=70)
         self.max_concurrent = 3
         self.stripe_key = "pk_live_51JwIw6IfdFOYHYTxyOQAJTIntTD1bXoGPj6AEgpjseuevvARIivCjiYRK9nUYI1Aq63TQQ7KN1uJBUNYtIsRBpBM0054aOOMJN"
         self.bin_cache = {}
@@ -382,7 +382,7 @@ class AdvancedCardChecker:
                     else:
                         self.user_stats[user_id]['declined'] += 1
                     
-                    if self.user_stats[user_id]['checked'] % 10 == 0:
+                    if self.user_stats[user_id]['checked'] % 3 == 0:
                         await self.send_progress_update(user_id, update)
 
                 await self.send_report(user_id, update)
