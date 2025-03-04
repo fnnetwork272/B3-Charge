@@ -124,8 +124,8 @@ class AdvancedCardChecker:
         ]
         reply_markup = InlineKeyboardMarkup(keyboard)
         await update.message.reply_text(
-            "🔥 Welcome to Advanced Card Checker Bot!\n\n"
-            "📁 Send combo file or use buttons below:",
+            "🔥 𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐓𝐨 𝐅𝐍 𝐌𝐀𝐒𝐒 𝐂𝐇𝐄𝐂𝐊𝐄𝐑 𝐁𝐎𝐓!\n\n"
+            "📁 𝐒𝐞𝐧𝐝 𝐂𝐨𝐦𝐛𝐨 𝐅𝐢𝐥𝐞 𝐎𝐫 𝐄𝐥𝐬𝐞 𝐔𝐬𝐞 𝐁𝐮𝐭𝐭𝐨𝐧 𝐁𝐞𝐥𝐨𝐰:",
             reply_markup=reply_markup
         )
 
@@ -330,9 +330,9 @@ class AdvancedCardChecker:
                 self.process_combos(user_id, filename, update)
             )
             await update.message.reply_text(
-                "✅ File received! Starting check...\n"
-                "⚡ Speed: 5-10 cards/sec\n"
-                "📈 Use /progress for live updates"
+                "✅ 𝐅𝐢𝐥𝐞 𝐑𝐞𝐜𝐞𝐢𝐯𝐞𝐝! 𝐒𝐭𝐚𝐫𝐭𝐢𝐧𝐠 𝐂𝐡𝐞𝐜𝐤𝐢𝐧𝐠...\n"
+                "⚡ 𝐒𝐩𝐞𝐞𝐝: 𝐏𝐫𝐨𝐠𝐫𝐞𝐬𝐬 𝐖𝐢𝐥𝐥 𝐁𝐞 𝐔𝐩𝐝𝐚𝐭𝐞𝐝 𝐖𝐡𝐞𝐧 𝐁𝐨𝐭 𝐂𝐡𝐞𝐜𝐤𝐞𝐝 50 𝐂𝐚𝐫𝐝𝐬/sec\n"
+                "📈 𝐔𝐬𝐞 /progress 𝐅𝐨𝐫 𝐋𝐢𝐯𝐞 𝐔𝐩𝐝𝐚𝐭𝐞𝐬"
             )
         except Exception as e:
             logger.error(f"File error: {str(e)}")
@@ -384,7 +384,7 @@ class AdvancedCardChecker:
                     else:
                         self.user_stats[user_id]['declined'] += 1
                     
-                    if self.user_stats[user_id]['checked'] % 3 == 0:
+                    if self.user_stats[user_id]['checked'] % 50 == 0:
                         await self.send_progress_update(user_id, update)
 
                 await self.send_report(user_id, update)
@@ -457,7 +457,7 @@ class AdvancedCardChecker:
 ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━
 
 [⌬]𝐂𝐇𝐄𝐂𝐊𝐄𝐃 𝐁𝐘 -» @{user.username if user.username else user.full_name}
-[⌬]𝐃𝐄𝐕 -» 𓆰𝅃꯭᳚⚡!! ⏤‌‌‌‌𝐅ɴ x EʟᴇᴄᴛʀᴀOᴘ𓆪𓆪⏤‌‌➤⃟🔥✘
+[⌬]𝐃𝐄𝐕 -» https://t.me/{self.admin_username}
 [み]𝗕𝗼𝘁 -» @FN_CHECKERR_BOT
 """
 
