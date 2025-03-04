@@ -589,7 +589,7 @@ class AdvancedCardChecker:
 ━━━━━━━━━━━━━━━━━━━━━━
 [み] 𝐃𝐞𝐯: @FNxELECTRA ⚡😈
 ━━━━━━━━━━━━━━━━━━━━━━"""
-        await self.edit_message(update, progress)
+        await self.send_message(update, progress)
 
     async def generate_hits_file(self, approved_ccs, total_ccs):
         random_number = random.randint(0, 9999)
