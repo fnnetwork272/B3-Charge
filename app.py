@@ -380,6 +380,8 @@ class AdvancedCardChecker:
                     self.user_stats[user_id]['checked'] += 1
                     if result:
                         self.user_stats[user_id]['approved'] += 1
+                    else:
+                        self.user_stats[user_id]['declined'] += 1
                         self.user_stats[user_id]['approved_ccs'].append(result)
                     
                     if self.user_stats[user_id]['checked'] % 3 == 0:
@@ -578,7 +580,8 @@ class AdvancedCardChecker:
 [⌬] 𝐅𝐍 𝐂𝐇𝐄𝐂𝐊𝐄𝐑 𝐋𝐈𝐕𝐄 𝐏𝐑𝐎𝐆𝐑𝐄𝐒𝐒 😈⚡
 ━━━━━━━━━━━━━━━━━━━━━━
 [✪] 𝐀𝐩𝐩𝐫𝐨𝐯𝐞𝐝: {stats['approved']}
-[❌] 𝐃𝐞𝐜𝐥𝐢𝐧𝐞𝐝: {stats['declined']}
+[✪] 𝐃𝐞𝐜𝐥𝐢𝐧𝐞𝐝: {stats['declined']}
+[✪] 𝐂𝐡𝐞𝐜𝐤𝐞𝐝: {stats['checked']}/{stats['total']}
 [✪] 𝐓𝐨𝐭𝐚𝐥:: {stats['total']}
 [✪] 𝐃𝐮𝐫𝐚𝐭𝐢𝐨𝐧: {elapsed.seconds // 60}m {elapsed.seconds % 60}s
 [✪] 𝐀𝐯𝐠 𝐒𝐩𝐞𝐞𝐝: {stats['total']/elapsed.seconds if elapsed.seconds else 0:.1f} c/s
