@@ -380,9 +380,9 @@ class AdvancedCardChecker:
                     self.user_stats[user_id]['checked'] += 1
                     if result:
                         self.user_stats[user_id]['approved'] += 1
+                        self.user_stats[user_id]['approved_ccs'].append(result)
                     else:
                         self.user_stats[user_id]['declined'] += 1
-                        self.user_stats[user_id]['approved_ccs'].append(result)
                     
                     if self.user_stats[user_id]['checked'] % 3 == 0:
                         await self.send_progress_update(user_id, update)
