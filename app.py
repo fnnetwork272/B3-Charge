@@ -472,18 +472,29 @@ class AdvancedCardChecker:
     async def format_approval_message(self, combo, bin_info, check_time, user):
         bin_info = bin_info or {}
         return f"""
-𝐀𝐩𝐩𝐫𝐨𝐯𝐞𝐝 ✅
+<b>𝐀𝐮𝐭𝐡𝐨𝐫𝐢𝐳𝐞𝐝✅</b>
 
-𝗖𝗮𝗿𝗱: <code>{combo}</code>
-𝐆𝐚𝐭𝐞𝐰𝐚𝐲: Stripe
-𝐑𝐞𝐬𝐩𝐨𝐧𝐬𝐞: Charged 1$
+[ϟ]𝘾𝘼𝙍𝘿 -» <code>{combo}</code>
+[ϟ]𝙎𝙏𝘼𝙏𝙐𝙎 -» 𝐂𝐡𝐚𝐫𝐠𝐞𝐝 1$
+[ϟ]𝙂𝘼𝙏𝙀𝙒𝘼𝙔 -» <code>𝐒𝐭𝐫𝐢𝐩𝐞</code>
+<b>[ϟ]𝗥𝗘𝗦𝗣𝗢𝗡𝗦𝗘 -»: <code>𝐂𝐡𝐚𝐫𝐠𝐞𝐝 𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲</code></b>
 
-𝗜𝗻𝗳𝗼: <code>{bin_info.get('scheme', 'N/A')} {bin_info.get('type', '')}</code>
-𝐈𝐬𝐬𝐮𝐞𝐫: <code>{bin_info.get('bank', 'N/A')}</code>
-𝐂𝐨𝐮𝐧𝐭𝐫𝐲: <code>{bin_info.get('country', 'N/A')}</code></b>
+━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━
 
-𝗧𝗶𝗺𝗲: <code>{check_time:.2f}s</code>
+[ϟ]𝘽𝙄𝙉 -» <code>{bin_info.get('scheme', 'N/A')} {bin_info.get('type', '')}</code>
+[ϟ]𝘽𝘼𝙉𝙆 -» <code>{bin_info.get('bank', 'N/A')}</code>
+<b>[ϟ]𝘾𝙊𝙐𝙉𝙏𝙍𝙔 -» <code>{bin_info.get('country', 'N/A')}</code></b>
+
+━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━
+
+[⌬]𝙏𝙄𝙈𝙀 -» <code>{check_time:.2f}s</code>
 <b>[⌬]𝐏𝐑𝐎𝐗𝐘 -» [ LIVE ✅ ]</b>
+
+━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━
+
+[⌬]𝐂𝐇𝐄𝐂𝐊𝐄𝐃 𝐁𝐘 -» @{user.username if user.username else user.full_name}
+[⌬]𝐃𝐄𝐕 -» https://t.me/{self.admin_username}
+[み]𝗕𝗼𝘁 -» @FN_CHECKERR_BOT
 """
 
     async def process_line(self, user_id, combo, semaphore, update):
