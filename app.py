@@ -393,7 +393,7 @@ class AdvancedCardChecker:
 𝐆𝐚𝐭𝐞𝐰𝐚𝐲: 𝐒𝐭𝐫𝐢𝐩𝐞
 𝐑𝐞𝐬𝐩𝐨𝐧𝐬𝐞: 𝐂𝐚𝐫𝐝 𝐃𝐞𝐜𝐥𝐢𝐧𝐞𝐝
 
-<b>𝐏𝐫𝐨𝐱𝐲: [ LIVE ✅ ]</b>
+𝐏𝐫𝐨𝐱𝐲: [ LIVE ✅ ]
 𝐃𝐄𝐕: @FNxELECTRA
 𝐁𝐨𝐭:  @FN_CHECKERR_BOT
 """)
